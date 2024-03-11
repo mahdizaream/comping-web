@@ -1,0 +1,93 @@
+@media (min-width:576px) {
+    
+}
+@media (min-width:768px) {
+    .conections{
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }    
+    .conectionsContent{
+        width: 60%;
+        padding-right: 2rem;
+    }
+    .conectionsBanner{
+        width: 40%;
+    }
+    .conections::before{
+        width: auto;
+        height: auto;
+        top: -5rem;
+        left: -40rem;
+        background-size: auto;
+        background-position: left  center;
+    }
+}
+@media (min-width:992px) {
+    .navBtn , .mobileNavMenu{
+        display: none;
+    }
+    .desktopMenu{display: flex;}
+    .desktopNavLinks{display: block;}
+    .headerContentDescription{
+        max-width: 50rem;
+    }
+    .conectionsContent{
+        padding-right: 4rem;
+    }
+    .conectionsTitle{
+        margin-bottom: 0;
+    }
+    .conections::before{
+       top: -10rem;
+       left: -30rem;   
+    }
+    .FooterApplication{ 
+        display: block;
+    }
+    .FooterApplicationMobile{
+        display: none;
+    }
+    .FooterContainer{
+        display: flex;
+    }
+    .FooterLeftSection{
+        max-width: 50rem;
+    }
+    .FooterScroll{
+        left: auto;
+    }
+}
+@media (min-width:1200px) {
+    .header{min-height: 80rem;
+    }
+    .conections{
+        justify-content: space-between;
+    }
+    .conectionsContent{
+        width: auto;
+        width: 60rem;
+    }
+    .conectionsBanner{
+        width: 42rem;
+    }
+    .conections::before{
+        top: -15rem;
+        left: -15rem;
+    }
+    .FooterContainer{
+        justify-content: space-between;
+    }
+    .FooterColumn{
+        margin-left: 2rem;
+    }  
+}
+@media (min-width:1400px) {
+     .conections{
+        padding: 3rem 6rem;
+     }
+     .conections::before{
+      top: -15rem;
+      left: -15rem;  
+     } 
+}

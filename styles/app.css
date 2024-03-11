@@ -1,0 +1,500 @@
+:root{
+    --primary-color:#e76f51;
+    --secondary-color:#f8e1db;
+    --gray:#8d8d8d;
+    --dark:#3b3735;
+    --primary-font:"Roboto Medium";
+    --secondary-font:"Archivo Black";
+}
+html{
+    font-size: 10px;
+}
+
+body{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: 'Roboto';
+    overflow-x: hidden;
+    background-color: #faf4f2;
+}
+*,*::after,*::before{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    color: #fff;
+    background-color: var(--dark);
+    width: 18rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10rem;
+    margin: 0 auto;
+    font-family: var(--primary-font);
+}
+.header{
+    background:linear-gradient(rgba(59,55,53,0.5) , rgba(59,55,53,0.5)) , url('../images/header-bg.jpg');
+    background-position: center ;
+    background-size: cover;
+    min-height: 70rem;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0;
+}
+.navRetrentive{
+    display: flex;
+    align-items: center;
+}
+.appLogo{
+    display: block;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: 4rem;
+}
+.appLogoImg{
+    width: 100%;
+    height: 100%;
+}
+.desktopMenu{display: none;}
+.desktopMenuItem{
+    margin-right: 1.5rem;
+}
+.desktopMenuLink{
+    color: var(--gray);
+    transition: .4s;
+}
+.desktopMenuLink:hover{
+    color: #fff;
+}
+.desktopMenuLinkActive{
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.desktopMenuLinkActive::before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    width: 4rem;
+    height: 0.4rem;
+    background-color: var(--primary-color);
+    margin: 0 auto;
+    border-radius: 10rem;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+.mobileNavMenu{
+    /* display: none; */
+    width: 25rem;
+    background-color: var(--dark);
+    position: fixed;
+    left: -25rem;
+    bottom: 0;
+    top: 0;
+    padding: 2.5rem;
+    transition: 0.4s ;
+}
+.mobileNavMenuOpen{
+    left: 0;
+}
+.mobileNavMenuTitle{
+    color: #fff;
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.mobileMenu{
+    margin-bottom: 3rem;
+}
+.mobileMenuItem{
+    margin-bottom: 1rem;
+}
+.mobileMenuLink{
+    color: #fff;
+}
+.mobileNavMenuLinks{
+    display: flex;
+}
+.mobileNavMenuLink{
+    display: block;
+    color: #fff;
+    border: #fff solid 1px;
+    padding: 1rem;
+    flex-grow: 1;
+    text-align: center;
+    transition: .4s;
+}
+.mobileNavMenuLink:hover{
+    background-color: #fff;
+    color: var(--dark);
+}
+.desktopNavLinks{
+    display: none;
+}
+.desktopNavLink{
+    color: #fff;
+    font-family: var(--primary-font);
+    margin-left: 1.5rem;
+}
+.desktopNavLinkBorder{
+    border: 1px solid #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 10rem;
+    transition: .4s;
+}
+.desktopNavLinkBorder:hover{
+    background-color: #fff;
+    color: var(--dark);
+}
+.navBtn{
+    background-color: #fff;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.navBtnLine{
+    display: block;
+    width: 3rem;
+    height: 0.4rem;
+    background-color:var(--primary-color) ;
+    border-radius: 5rem;
+    position: relative;
+}
+.navBtnLine::after , .navBtnLine::before{
+    content: '';
+    position: absolute;
+    width: 3rem;
+    height: 0.4rem;
+    background-color:var(--primary-color) ;
+    border-radius: 5rem;
+    transition: 0.4s;
+}
+.navBtnLine::after{top: 0.8rem;}
+.navBtnLine::before{top: -0.8rem;}
+
+.navBtnOpen .navBtnLine{
+    background-color: transparent;
+}
+.navBtnOpen .navBtnLine::after {
+    transform: translateY(-8px) rotate(-45deg);
+}
+.navBtnOpen .navBtnLine::before {
+    transform: translateY(8px) rotate(45deg);
+}
+/* --------------------end nav ------------------------- */
+.headerContent{
+    text-align: center;
+    color: #fff;
+    margin-top: 6rem;
+}
+.headerContentTitle{
+    font-family: var(--secondary-font);
+    font-size: 5rem;
+    max-width: 35rem;
+    margin:0 auto 3rem auto ;
+}
+.headerContentDescription{
+    font-size: 1.8rem;
+    max-width: 34rem;
+    margin: 0 auto 2rem auto;
+}
+.headerContentLink{background-color: var(--primary-color); }
+/*-------------------header------------------------*/
+.main{
+    padding: 4rem 0; 
+}
+.services{
+    margin-top: -20rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.service{
+    background-color: #fff;
+    width: 30rem;
+    height: 26rem;
+    border-radius: 2rem;
+    margin: 0 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    color: var(--dark);
+    flex-grow: 1;
+}
+.serviceImg{
+    display: block;
+}
+.serviceTitle{
+    font-family: var(--secondary-font);
+    font-size: 1.8rem;
+    margin: 1.5rem 0 0.6rem 0;
+}
+/*-------------location-----------------*/
+.Locations{
+    text-align: center;
+    padding: 6rem 0;
+    color: var(--dark);
+    position: relative;
+}
+.LocationsLogo{
+    width: 8rem;
+    height: 8rem;
+}
+.LocationsTitle{
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    max-width: 36rem;
+    margin: 3rem auto;
+}
+.LocationsPlaces{
+    display: flex;
+    flex-wrap: wrap;
+}
+.Location{
+    background-color: #fff;
+    width: 30rem;
+    padding: 2rem;
+    margin: 0 1rem 2rem 1rem;
+    border-radius: 2rem;
+    flex-grow: 1;
+    overflow: hidden;
+}
+.LocationBanner{
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+    height: 18rem;
+}
+.LocationImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.LocationLike{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+.LocationPrice{
+    background-color: #fff;
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 12rem;
+    padding: 0.5rem 2rem;
+    border-radius: 1rem;
+}
+.LocationPriceText{
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    text-align: center;
+}
+.LocationTitle{
+    font-family: var(--secondary-font);
+    margin: 3rem 0 0.5rem 0;
+    font-size: 1.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.LocationDescription{
+    margin-bottom: 3rem;
+}
+.LocationLink:hover{
+    background-color: var(--gray);
+    color: #fff;
+}
+.LocationsBtn{
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    margin-top: 3rem;
+    transition: 0.4s;
+}
+.LocationsBtn:hover{
+    color: #fff;
+    background-color: var(--primary-color);
+}
+/*--------------------------------conections-------------------------------------------*/
+.conections{
+    background-color: var(--secondary-color);
+    border-radius: 2rem;
+    color: var(--dark);
+    text-align: center;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+.conections::before{
+    content: '';
+    position: absolute;
+    width: 50rem;
+    height: 50rem;
+    top: 15rem;
+    bottom: 0;
+    left: -15rem;
+    right: 0;
+    background: url(../images/svgs/shape3.svg) no-repeat;
+    background-size: contain;
+}
+.conectionsContent , .conectionsBanner{
+    z-index: 2;
+}
+.conectionsTitle{
+    font-family: var(--secondary-font);
+    font-size: 3em;
+    margin: 1.5rem auto;
+}
+.conectionsCaption{
+
+    font-family: var(--primary-font);
+}
+.conectionsEmailBox{
+    background-color: #fff;
+    height: 8rem;
+    padding: 0 1.5rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
+}
+.conectionsForm{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.conectionsEmailIcon{
+    flex-shrink: 0;
+}
+.conectionsInput{
+    border: none;
+    outline: none;
+    height: 100%;
+    color: #8d8d8d;
+    width: 100%;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+}
+.conectionsSubmit{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 2rem;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 1.5rem 0 rgba(231, 111, 81, 0.40);
+}
+
+.conectionsImage{
+    width: 100%;
+}
+.Footer{
+    background-color: var(--secondary-color);
+    border-top-right-radius: 10rem;
+    border-top-left-radius: 10rem;
+    color: var(--dark);
+    padding-bottom: 4rem;
+}
+.Footer>.container{
+    position: relative;
+    padding-top: 10rem;
+}
+.container{}
+.FooterScroll{
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: -2.5rem;
+    box-shadow: 0 0 1rem rgba(59, 55, 53, 0.05);
+}
+.FooterContainer{}
+.FooterLeftSection{
+    max-width: 60rem;
+}
+.FooterContent{
+    margin-bottom: 2rem;
+}
+.FooterTitle{
+    font-family: var(--secondary-font);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.FooterContentDescription{}
+.FooterApplication{
+    display: none;
+}
+.FooterAppLinkImg{}
+.FooterRigthSection{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.FooterColumn{
+    width: 16rem;
+    margin: 0 1rem;
+}
+.FooterList{}
+.FooterlistItem{}
+.FooterLink{
+    color: var(--dark);
+}
+.FooterLink{
+    text-decoration: underline;
+}
+.FooterApplicationMobile{display: block;}
+
+
+
+
+
+
+
+
+
+
+.cr{
+    text-align: center;
+}
